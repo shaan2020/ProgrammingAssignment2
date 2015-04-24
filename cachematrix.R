@@ -1,7 +1,8 @@
-## makeCacheMatrix develops a special matrix object, and then cacheSolve 
+##We create a function called makeCacheMatrix which develops a special matrix object, and then
+## another function cacheSolve 
 ## computes the inverse of the matrix.
-## If the matrix inverse has already been calculated, it will instead 
-## find it in the cache and return it, and not calculate it again.
+## If the matrix inverse has already been computed, it will instead 
+## find it in the cache and return it, and not compute it again.
 
 makeCacheMatrix <- function(x = matrix()) {
     inv_x <- NULL
@@ -34,6 +35,6 @@ cacheSolve <- function(x, ...) {
     }
 }
 
-mat <- matrix(data = c(1,2,3,4), nrow = 2, ncol = 2)
+mat <- matrix(data = c(5,6,7,8), nrow = 2, ncol = 2)
 mat2 <- makeCacheMatrix(mat)
 cacheSolve(mat2)
